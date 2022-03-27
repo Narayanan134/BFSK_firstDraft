@@ -4,7 +4,7 @@ let encodedWaveCtx = encodedWaveCanvas.getContext('2d');
 let canvas_width = encodedWaveCanvas.parentElement.clientWidth || 1100;
 let canvas_height = 250;
 let orgx = 50;
-let orgy = canvas_height / 2;
+let orgy = canvas_height / 2+10;
 
 encodedWaveCanvas.width = canvas_width;
 encodedWaveCanvas.height = canvas_height;

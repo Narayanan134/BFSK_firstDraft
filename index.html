@@ -50,6 +50,7 @@
     }
     function updateSineAmp(value) {
       document.getElementById("swAmp").innerHTML = value*2;
+      document.getElementById("eb").innerHTML=value*2;
     }
     function updateSineFreq(value) {
       document.getElementById("swFreq").innerHTML = value;
@@ -301,6 +302,8 @@
           </div>
           <div class="container-variables-wo-border">
             <div class="variables">
+              <label for="fname" class="varname">Eb : <span id="eb"></span><span>V</span></label>
+              <br><br>
               <label for="fname" class="varname">Vertical Scale:</label><br>
               <div class="slidecontainer">
                 <input  onchange="vsync(this.id)" type="range" min="5" max="200" step="5" value="50" class="slider" id="sampledwave_vertical_scale_factor">
@@ -565,6 +568,10 @@
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
                 <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="reconwave_horizontal_scale_factor">
+              </div>
+              <div class="parameters">
+                <h6>BER : <span id="ber"></span></h6><br>
+                <h6>Effeciency : <span id="eff"></span></h6>
               </div>
             </div>
           </div>
