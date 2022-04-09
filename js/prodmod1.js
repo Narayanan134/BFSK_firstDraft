@@ -67,6 +67,7 @@ function plotSine(ctx, amplitude, frequency, xOffset, yOffset, vertical_scaling_
     // 1-5: 80
     // 6-12: 140
     // 13-20: 200
+    
     var Fs = 0;
     if (frequency >= 1 && frequency <= 5) Fs = 80;
     else if (frequency >= 6 && frequency <= 12) Fs = 140;

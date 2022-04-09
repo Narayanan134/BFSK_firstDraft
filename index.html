@@ -67,6 +67,9 @@
     function updateBitLength(value) {
       document.getElementById("bitlength").innerHTML = value;
     }
+    function updateNoiseFreq(value){
+      document.getElementById("swNoise").innerHTML = value;
+    }
     function showsourcecanvas() {
       let sourceGraph = document.getElementById('sourceWaveCanvas');
       let sourcectx = sourceGraph.getContext('2d');
@@ -465,7 +468,14 @@
               <div class="slidecontainer">
                 <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="decoderwave_horizontal_scale_factor">
               </div>
+              <label for="fname" class="varname">Noise:
+                <span><span id="swNoise">1</span>Hz</span>
+              </label><br>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="20" step="5" value="1" class="slider" oninput="updateNoiseFreq(this.value)"
+                  id="noisefrequency">
               </div>
+            </div>
           </div>
         </div>
         <!-- Modal footer -->
@@ -570,6 +580,7 @@
                 <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="reconwave_horizontal_scale_factor">
               </div>
               <div class="parameters">
+                <h6>Bits : <span id="bits"></span></h6>
                 <h6>BER : <span id="ber"></span></h6><br>
                 <h6>Effeciency : <span id="eff"></span></h6>
               </div>
